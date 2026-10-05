@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: #1e3a8a;
+      letter-spacing: -1px;
+    }
+    h1 span { color: #3b82f6; }
+    .tagline { color: #64748b; margin-top: 8px; font-size: 1.1rem; }
+    .profile {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #334155;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: #1e3a8a;
+    }
+    .progress {
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      margin: 12px 0 8px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      border-radius: 4px;
+    }
+    .bar-75 { width: 75%; background: #3b82f6; }
+    .bar-70 { width: 70%; background: #10b981; }
+    .bar-60 { width: 60%; background: #8b5cf6; }
+    .bar-55 { width: 55%; background: #f43f5e; }
+    ul { list-style: none; }
+    ul li { margin-bottom: 6px; color: #475569; font-size: 0.95rem; }
+    .quote {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+      color: #1e40af;
+      margin: 40px 0;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .global {
+      text-align: center;
+      margin: 50px 0;
+    }
+    .circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: conic-gradient(#3b82f6 0% 67%, #e2e8f0 67% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      position: relative;
+    }
+    .circle::before {
+      content: '';
+      width: 110px;
+      height: 110px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .circle span {
+      position: relative;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+    footer {
+      text-align: center;
+      color: #94a3b8;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MON <span>PORTFOLIO</span></h1>
+      <p class="tagline">Formations • Compétences • Techniques</p>
+      <p style="margin-top:8px;color:#64748b">Apprendre aujourd'hui, construire demain.</p>
+    </header>
+
+    <div class="profile">
+      Un profil polyvalent entre réseaux, systèmes, développement et cybersécurité,<br>
+      avec la volonté d'apprendre et de progresser.
+    </div>
+
+    <div class="grid">
+      <!-- Formations -->
+      <div class="card">
+        <h3>🎓 Formations</h3>
+        <ul>
+          <li>• Bac D – Sciences et Technologies</li>
+          <li>• BTS – Systèmes Électroniques et Informatiques</li>
+          <li>• Licence Professionnelle – Réseaux et Télécommunications</li>
+        </ul>
+      </div>
+
+      <!-- Objectifs -->
+      <div class="card">
+        <h3>🎯 Parcours & Objectifs</h3>
+        <ul>
+          <li>✓ Approfondir mes compétences techniques</li>
+          <li>✓ Évoluer vers des postes réseau / cybersécurité / admin système</li>
+          <li>✓ Contribuer à des projets innovants</li>
+          <li>✓ Me former continuellement + certifications</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="margin:40px 0 20px;color:#1e3a8a">Compétences</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🌐 Réseaux & Télécoms — 75%</h3>
+        <div class="progress"><div class="progress-bar bar-75"></div></div>
+        <ul>
+          <li>TCP/IP, VLAN, OSPF (bases)</li>
+          <li>Configuration routeurs & switches</li>
+          <li>Administration réseau • Fibre optique</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>💻 Systèmes & Administration — 70%</h3>
+        <div class="progress"><div class="progress-bar bar-70"></div></div>
+        <ul>
+          <li>Linux (Mint, Ubuntu)</li>
+          <li>Windows (administration de base)</li>
+          <li>Gestion utilisateurs • Virtualisation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>⌨️ Développement & Scripting — 60%</h3>
+        <div class="progress"><div class="progress-bar bar-60"></div></div>
+        <ul>
+          <li>Python (bases et scripts)</li>
+          <li>Bash • Shell / ligne de commande</li>
+          <li>Tkinter (GUI)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🛡️ Cybersécurité — 55%</h3>
+        <div class="progress"><div class="progress-bar bar-55"></div></div>
+        <ul>
+          <li>Sécurité réseau (bonnes pratiques)</li>
+          <li>Pare-feu (principes)</li>
+          <li>Sensibilisation aux risques • Protection des données</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🎧 Support & Applications — 70%</h3>
+        <div class="progress"><div class="progress-bar bar-70"></div></div>
+        <ul>
+          <li>Support utilisateur (niveau 1)</li>
+          <li>Diagnostic et résolution de problèmes</li>
+          <li>Applications métiers • Documentation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🛠️ Bureautique & Outils — 75%</h3>
+        <div class="progress"><div class="progress-bar bar-75"></div></div>
+        <ul>
+          <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+          <li>Google Workspace</li>
+          <li>Git & GitHub • Outils de gestion de projet</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote">
+      « La technologie n'est pas seulement un outil, c'est une opportunité de créer des solutions et d'avoir un impact. »
+    </div>
+
+    <h2 style="margin:40px 0 20px;color:#1e3a8a">Projets réalisés / en cours</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>📱 Application Android</h3>
+        <p>Accéléromètre – Vitesse</p>
+        <small>Android / Kotlin</small>
+      </div>
+      <div class="project-card">
+        <h3>🎲 Simulateur de Loterie</h3>
+        <p>Interface graphique + statistiques</p>
+        <small>Python / Tkinter</small>
+      </div>
+      <div class="project-card">
+        <h3>🎬 Gestionnaire de Vidéos</h3>
+        <p>Découpage et organisation</p>
+        <small>Python / Tkinter</small>
+      </div>
+    </div>
+
+    <div class="global">
+      <div class="circle">
+        <span>67%</span>
+      </div>
+      <p style="font-weight:600;color:#1e3a8a">Compétences globales</p>
+    </div>
+
+    <footer>
+      APPRENDRE • PRATIQUER • PROGRESSER • RÉUSSIR
+    </footer>
+  </div>
+</body>
+  </html>
